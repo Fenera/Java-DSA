@@ -1,0 +1,9 @@
+linked lists are really easy to understand once you think of them in a more visual way
+
+imagine there is a group of people standing in a circle roughly, where each person points their finger at another another person, i.e person 1 points at person 2, person 2 points at person 3, and so on. There is one person who is the “head” because he is the one who starts the pointing chain and no one is pointing at him. Then there is a “tail” that points at nothing, he’s got his finger up but it’s not pointing at anyone
+
+now let’s say a new person joins the game, they have multiple options: they can point to the guy at the “head” which makes him the new head, or have the “tail” guy point at him which makes him the new tail. Or we can literally put him anywhere we want, for example we can have the 3rd guy point at him instead of person 4, and then the new guy can point at person 4, so we effectively added this new person to our pointing game
+
+the real fun is when you realize you can make anyone point at anyone else, it’s up to you and how you want to play. But traditionally, to get to the last guy, you start from the head and keep going to the person he’s pointing to, and you repeat that process until you find the person pointing at nothing
+
+that’s what a linked list is
