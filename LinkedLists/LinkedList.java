@@ -129,6 +129,17 @@ public class LinkedList{
         return temp;
     }
 
+    // set a node's value at a specific index and return a boolean based on if it was successful or not
+    public boolean set(int index, int value){
+        Node temp = get(index);
+
+        if(temp != null){
+            temp.value = value;
+            return true;
+        }
+        return false;
+    }
+
     public void printList(){
         Node temp = head;
 
