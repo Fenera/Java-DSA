@@ -27,6 +27,8 @@ public class LinkedList{
 
     }
 
+    // append adds the node to the end of the LL
+
     public void append(int value){
         Node newNode = new Node(value);
 
@@ -41,6 +43,47 @@ public class LinkedList{
         }
 
         length ++;
+    }
+
+        
+
+    // prepend adds the node to the begininning of the LL
+    public void prepend(int value){
+        Node newNode = new Node(value);
+
+        // LL is empty
+        if(length == 0){
+            head = newNode;
+            tail = newNode;
+        }
+        else{
+            newNode.next = head;
+            head = newNode;
+        }
+
+        length ++;
+    }
+
+    // insert inserts the node the a particular index
+
+    // removes the fist node of the LL
+    public Node removeFirst(){
+         if (length == 0) return null;
+
+         Node temp = head;
+         head = head.next;
+
+         // break off first node
+         temp.next = null;
+         length --;
+
+         if(length == 0){
+            // if the LL only had 1 value, head.next would be null but tail would still be pointing
+            // at the node so this fixes that
+            tail = null;
+         }
+
+         return temp;
     }
 
     // removes the last node in the LL
@@ -73,9 +116,11 @@ public class LinkedList{
         Node temp = head;
 
         while(temp != null){
-            System.out.println(temp.value);
+            System.out.printf("%d -> ", temp.value);
             temp = temp.next;
+            
         }
+        System.out.println();
     }
 
     public void printHead(){
@@ -90,9 +135,4 @@ public class LinkedList{
         System.out.println("Length: " + length);
     }
 
-    // append adds the node to the end of the LL
-
-    // prepend adds the node to the begininning of the LL
-
-    // insert inserts the node the a particular index
 }
