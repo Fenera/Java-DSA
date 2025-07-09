@@ -112,6 +112,23 @@ public class LinkedList{
         return temp;
     }
 
+    // get node at specified index
+    public Node get(int index){
+        if(index <= 0 || index >= length) return null;
+        if(length == 0) return null;
+        if(length == 1){
+            return head;
+        }
+
+        Node temp = head;
+
+        for(int i = 0; i < index; i++){
+            temp = temp.next;
+        }
+
+        return temp;
+    }
+
     public void printList(){
         Node temp = head;
 
